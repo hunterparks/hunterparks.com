@@ -1,179 +1,53 @@
 <!DOCTYPE html>
-  <head>
-    <title>Under Construction</title>
-    <meta name="viewport" content="width=device-width">
-    <style>
-      body {
-        --bg-color: #ffffff;
-        --text-color: #000000;
-        --icon-color: darkorange;
-        --date-color: gray;
-        margin: 0;
-        padding: 0;
-        background: var(--bg-color);
-        color: var(--text-color);
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      #container {
-        max-width: 80vw;
-        margin: 50px auto;
-      }
-      #left {
-        width: 45%;
-        float: left;
-        text-align: right;
-      }
-      #right {
-        width: 55%;
-        float: right;
-      }
-      #icon {
-        font-size: 10em;
-        line-height: 1em;
-        margin-right: 1vw;
-        color: var(--icon-color);
-      }
-      #text {
-        font-size: 2em;
-        font-weight: bold;
-        margin: 0;
-      }
-      #date {
-        font-size: .5em;
-        color: var(--date-color);
-      }
-      #theme {
-        position: absolute;
-        bottom: 25px;
-        right: 25px;
-        width: 100px;
-        height: 90px;
-        background: var(--text-color);
-        color: var(--bg-color);
-        font-size: 2em;
-        font-weight: bold;
-        border: none;
-        box-shadow: none;
-        border-radius: 0;
-      }
-      @media (max-width: 700px) {
-        #container {
-          max-width: 100vw;
-        }
-      }
-      @media (max-width: 700px) {
-        #icon {
-          font-size: 7em;
-        }
-        #text {
-          font-size: 1.5em;
-        }
-      }
-      @media (max-width: 420px) {
-        #left {
-          width: 100%;
-          text-align: center;
-        }
-        #right {
-          width: 100%;
-          text-align: center;
-        }
-      }
-    </style>
-    <script>
-      // Theme switcher based on CSS variables made by Fernardo Paredes
-      // https://www.fdp.io/blog/2016/11/08/theming-via-css-properties/
-
-      // Polyfilling Object.entries for Safari :/
-      Object.entries = (object) => Object.keys(object).map(
-        (key) => [ key, object[key] ]
-      )
-
-      const isObject = (obj) => obj === Object(obj)
-
-      const LightTheme = {
-        '--bg-color': '#ffffff',
-        '--text-color': '#000000',
-        '--icon-color': 'darkorange',
-        '--date-color': 'gray',
-        themeName: 'LightTheme'
-      };
-
-      const DarkTheme = {
-        '--bg-color': '#444444',
-        '--text-color': 'white',
-        '--icon-color': 'orange',
-        '--date-color': 'lightgray',
-        themeName: 'DarkTheme'
-      };
-
-      const setCSSVariable = (key, value) => {
-        document.body.style.setProperty(key, value);
-      };
-
-      const saveTheme = (theme) => {
-        if (window.localStorage) {
-          localStorage['theme'] = JSON.stringify(theme);
-          localStorage['currentTheme'] = theme.themeName;
-        }
-      };
-
-      const loadTheme = () => {
-        if (window.localStorage)
-        {
-          const maybeTheme = localStorage['theme'];
-          if (maybeTheme) return JSON.parse(maybeTheme);
-        }
-        return null;
-      };
-
-      const updateTheme = (theme) => {
-        if (!isObject(theme)) return;
-        Object.entries(theme).forEach(([key, value]) => setCSSVariable(key, value));
-        var el = document.getElementById('theme');
-        el.innerHTML = (theme.themeName === LightTheme.themeName) ? 'Dark' : 'Light';
-        saveTheme(theme);
-      };
-
-      const checkForSavedTheme = () => {
-        const theme = loadTheme();
-        if (theme) updateTheme(theme);
-      };
-
-      const switchTheme = () => {
-        const el = document.getElementById('theme');
-        const theme = loadTheme();
-        const currentTheme = localStorage['currentTheme'];
-        if (theme && currentTheme === LightTheme.themeName) {
-          updateTheme(DarkTheme);
-          el.innerHTML = 'Light';
-        } else {
-          updateTheme(LightTheme);
-          el.innerHTML = 'Dark';
-        }
-      };
-
-      window.onload = () => {
-        checkForSavedTheme();
-        if (!localStorage['currentTheme']) {
-          switchTheme();
-        }
-      };
-    </script>
-  </head>
-  <body>
-    <div id="container">
-      <div id="left">
-        <span id="icon">&#9888;</span>
-      </div>
-      <div id="right">
-        <p id="text">
-          Under Construction<br>
-          Coming Soon...<br>
-          <span id="date">Updated: January 20, 2019</span>
-        </p>
-      </div>
-    </div>
-    <button id="theme" onClick="switchTheme()">Dark</button>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+  <title>Hunter Parks | Home</title>
+</head>
+<body>
+  <div id="content">
+    <header>
+      <a href="/" id="header_logo">H<small>UNTER</small> <b>P<small>ARKS</small></b></a>
+    </header>
+    <nav>
+      <ul>
+        <li class="github"><a href="https://github.com/hunterparks" target="_blank" rel="noopener noreferrer">GITHUB</a></li>
+        <li class="twitter"><a href="https://twitter.com/SharkTernUp" target="_blank" rel="noopener noreferrer">TWITTER</a></li>
+      </ul>
+    </nav>
+    <section class="multip">
+      <h3>About Me</h3>
+      <p>
+        Hello, my name is Hunter Parks. I am a Software Engineer with PKWARE. My work has me using
+        a wide variety of technologies that span from front-end to back-end - enabling robust and
+        secure encryption solutions for our customers. Please <a class="highlight" href="https://www.pkware.com/" target="_blank" rel="noopener noreferrer">check out</a>
+        PKWARE's website if you would like to learn more about our product offerings!
+      </p>
+      <p>
+        In 2018, I graduated from the Milwaukee School of Engineering (MSOE) with a double major
+        in Computer Engineering and Software Engineering. Currently, I am pursuing my Master of
+        Business Administration specializing in Business Analytics at MSOE's Rader School of
+        Business. Learning is a strong passion of mine and therefore I am always looking for new
+        articles and books to read and new technologies to become familiar with. When I complete
+        my MBA in the spring of 2020, I plan to focus more on blogging and technical writing.
+      </p>
+      <p>
+        Have any cool articles or blog posts that I should read? Please send them to me
+        <a class="highlight" href="&#109;&#97;i&#108;to&#58;%68u&#110;t%65rmpa%72ks&#64;g&#109;a&#105;l&#46;c&#111;%&#54;&#68;?subject=[SITE COMMENT] Hey, Hunter! Here is a link for you!">here</a>!
+      </p>
+    </section>
+    <section>
+      <h3>Current Readings</h3>
+      <p><a class="title" href="https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/" target="_blank" rel="noopener noreferrer">Details of the Cloudflare outage on July 2, 2019</a> | By John Graham-Cumming</p>
+      <p><a class="title" href="https://basecamp.com/shapeup/" target="_blank" rel="noopener noreferrer">Shape Up: Stop Running In Circles and Ship Work that Matters</a> | By Ryan Singer</p>
+    </section>
+    <footer>
+      <small>&copy; %%year%% HUNTER PARKS | All rights reserved.</small>
+    </footer>
+  </div>
+</body>
 </html>
