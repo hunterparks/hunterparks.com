@@ -1,7 +1,15 @@
-*, body {
+* {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+}
+
+body {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --highlight-color: crimson;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 a {
@@ -10,7 +18,7 @@ a {
 }
 
 a.highlight {
-  color: crimson;
+  color: var(--highlight-color);
   font-weight: bold;
   text-decoration: underline;
 }
@@ -86,6 +94,20 @@ nav ul li.twitter a:hover {
   transition: color 250ms linear;
 }
 
+nav ul li.dark a:hover {
+  color: #6e5494;
+  -webkit-transition: color 250ms linear;
+  -ms-transition: color 250ms linear;
+  transition: color 250ms linear;
+}
+
+nav ul li.light a:hover {
+  color: #f2d91d;
+  -webkit-transition: color 250ms linear;
+  -ms-transition: color 250ms linear;
+  transition: color 250ms linear;
+}
+
 section {
   margin: 4vh 0;
   padding: 0 5vw;
@@ -104,7 +126,6 @@ section p {
 }
 
 footer {
-  background-color: white;
   height: 5vh;
   margin-top: 2vh;
   line-height: 5vh;
