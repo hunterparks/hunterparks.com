@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>backup on HunterParks</title>
+    <link>http://hunterparks.com/tags/backup/</link>
+    <description>Recent content in backup on HunterParks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 08 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://hunterparks.com/tags/backup/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Backing up Files to Backblaze B2 with Rclone</title>
+      <link>http://hunterparks.com/posts/backing-up-file-to-backblaze-r2-with-rclone/</link>
+      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hunterparks.com/posts/backing-up-file-to-backblaze-r2-with-rclone/</guid>
+      <description>&lt;p&gt;Backing up files is arguably one of the most important things someone can do on their computer. Ensuring there is a copy of your most important data affords you the ability to not worry about a future ransomware virus, a stolen/broken computer, or just a simple accident that could erase your information forever.&lt;/p&gt;
+&lt;p&gt;A strategy that is widely seen as a very effective way to backup your data is the 3-2-1 Backup Rules/Best Practices:&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&#34;http://hunterparks.com/images/321.png&#34;
+         alt=&#34;The 3-2-1 Backup Rules/Best Practices&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;The 3-2-1 Backup Rules/Best Practices&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;With the following guide, I hope to be able to have an additional copy of my data, stored on a different storage type, and synced with a cloud service provider - Backblaze in this case.&lt;/p&gt;
+&lt;h1 id=&#34;preparing-the-hardware-optional-&#34;&gt;Preparing the Hardware (optional)&lt;/h1&gt;
+&lt;p&gt;If you already have a computer setup, please skip this step. If not, see the list of hardware I used for this project - found below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Raspberry Pi 3 Model B&lt;/li&gt;
+&lt;li&gt;Raspberry PI Case&lt;/li&gt;
+&lt;li&gt;SD Card&lt;/li&gt;
+&lt;li&gt;Internal Hard Drive&lt;/li&gt;
+&lt;li&gt;External Hard Drive Enclosure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: If you do not have an extra hard drive sitting around, you can purchase external drive instead.&lt;/p&gt;
+&lt;h1 id=&#34;preparing-the-computer-&#34;&gt;Preparing the Computer&lt;/h1&gt;
+&lt;p&gt;The only prerequisite for the computer is that you have Windows, macOS, or Linux installed and functioning. Plug in your external hard drive and make sure that it is functioning correctly. Additionally, ensure that you have an active internet connection as that will be required for installing the necessary software and uploading your files to Backblaze B2 for backup.&lt;/p&gt;
+&lt;h1 id=&#34;backing-up-your-files-&#34;&gt;Backing up Your Files&lt;/h1&gt;
+&lt;h3 id=&#34;step-1---set-up-a-backblaze-b2-account-&#34;&gt;Step 1 - Set Up a Backblaze B2 Account&lt;/h3&gt;
+&lt;p&gt;While Rclone supports many different cloud providers (see their website &lt;a href=&#34;https://rclone.org/overview/&#34;&gt;here&lt;/a&gt;), I will be using &lt;a href=&#34;https://www.backblaze.com/b2/cloud-storage.html&#34;&gt;B2&lt;/a&gt; from &lt;a href=&#34;https://www.backblaze.com/&#34;&gt;Backblaze&lt;/a&gt;. Follow the instructions on the B2 website to setup your B2 account and get your API key - this key will allow you to access you B2 account through Rclone.&lt;/p&gt;
+&lt;h3 id=&#34;step-2---install-rclone-&#34;&gt;Step 2 - Install Rclone&lt;/h3&gt;
+&lt;p&gt;Rclone will need to be installed on the computer you are using to store your files. If you are not using the same hardware I am, please install the Rclone version that will work for your computer. Visit the Rclone &lt;a href=&#34;https://rclone.org/downloads/&#34;&gt;downloads&lt;/a&gt; page to find the installer for your computer. If you are following my hardware choice, select the ARM - 32 Bit installer. Finally, follow the &lt;a href=&#34;https://rclone.org/install/&#34;&gt;installation instructions&lt;/a&gt; on the Rclone website to &lt;em&gt;properly&lt;/em&gt; install Rclone on your computer.&lt;/p&gt;
+&lt;h3 id=&#34;step-3---connect-rclone-to-backblaze-b2-&#34;&gt;Step 3 - Connect Rclone to Backblaze B2&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Run &lt;code&gt;rclone config&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;n&lt;/code&gt; to create a new remote.&lt;/li&gt;
+&lt;li&gt;Specify a name to reference this remote in commands. For my purposes, I chose &lt;code&gt;remote&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;2&lt;/code&gt; then hit &lt;code&gt;enter&lt;/code&gt; to select Backblaze B2.&lt;/li&gt;
+&lt;li&gt;Enter your Backblaze Account ID then hit &lt;code&gt;enter&lt;/code&gt;.
+&lt;!-- raw HTML omitted --&gt;This will look something like &lt;code&gt;123456789abc&lt;/code&gt;.&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;Enter your Backblaze Application Key then hit &lt;code&gt;enter&lt;/code&gt;.
+&lt;!-- raw HTML omitted --&gt;This will look something like &lt;code&gt;0123456789abcdef0123456789abcdef0123456789&lt;/code&gt;.&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;Leave Endpoint blank then hit &lt;code&gt;enter&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;y&lt;/code&gt; then hit &lt;code&gt;enter&lt;/code&gt; to save configuration.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For more information, please visit the &lt;a href=&#34;https://rclone.org/b2/&#34;&gt;Rclone B2&lt;/a&gt; website.&lt;/p&gt;
+&lt;h3 id=&#34;step-4---configure-encryption-in-rclone-&#34;&gt;Step 4 - Configure Encryption in Rclone&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Run &lt;code&gt;rclone config&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;n&lt;/code&gt; to create an encrypted container.&lt;/li&gt;
+&lt;li&gt;Specify a name to reference this container in commands. For my purposes, I chose &lt;code&gt;secret&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;5&lt;/code&gt; then hit &lt;code&gt;enter&lt;/code&gt; to select crypt.&lt;/li&gt;
+&lt;li&gt;Enter &lt;code&gt;&amp;lt;REMOTE_NAME&amp;gt;:&amp;lt;B2_BUCKET_NAME&amp;gt;&lt;/code&gt; then hit &lt;code&gt;enter&lt;/code&gt; to select the previously made remote.
+&lt;!-- raw HTML omitted --&gt;For my purpose, this is &lt;code&gt;remote:backup&lt;/code&gt; where &lt;code&gt;backup&lt;/code&gt; is the name of my B2 bucket.&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;standard&lt;/code&gt; for encrypted file names.&lt;/li&gt;
+&lt;li&gt;Choose a passphrase or generate one.
+&lt;!-- raw HTML omitted --&gt;It is important that you remember your passphrase - you will not be able to decrypt your backups without it.&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;Choose a salt or generate one.
+&lt;!-- raw HTML omitted --&gt;It is important that you remember your salt - you will not be able to decrypt your backups without it.&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;y&lt;/code&gt; to confirm the configuration and press &lt;code&gt;q&lt;/code&gt; to close Rclone.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;step-5---backing-up-your-files-&#34;&gt;Step 5 - Backing up Your Files&lt;/h3&gt;
+&lt;p&gt;Now, when wanting to backup a folder to BackBlaze, type the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;rclone sync /path/to/folder secret:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This line takes all of your files in the folder path and uploads them to your Backblaze B2 bucket. For me, I write the following line:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;rclone sync Backup/ secret
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Note&lt;!-- raw HTML omitted --&gt;: There are two options for uploading to the cloud. While I use &lt;code&gt;sync&lt;/code&gt;, you can also use &lt;code&gt;copy&lt;/code&gt;. Here are the differences:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Sync&lt;/code&gt; will mirror the folder path exactly from your local filesystem to Backblaze. This deletes files in the destination that have been removed from the source.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Copy&lt;/code&gt; will copy files from your local filesystem to Backblaze where deleted files will NOT be deleted from Backblaze.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you have a lot of files to upload that could take a long time, use the following command so that output is recorded to a file and the upload will not get killed if you log out:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;setsid [command] --log-file /path/to/file.log &amp;amp;&amp;gt;/dev/null
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;where &lt;code&gt;[command]&lt;/code&gt; is the command you used above.&lt;/p&gt;
+&lt;h3 id=&#34;step-6---backup-automation-&#34;&gt;Step 6 - Backup Automation&lt;/h3&gt;
+&lt;p&gt;The following set of commands will setup your computer to run an automatic backup of your files.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Run &lt;code&gt;crontab -e&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;At the end of the file, add the following command:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;0 * * * * /usr/bin/setsid /usr/sbin/rclone sync /path/to/folder secret: &amp;amp;&amp;gt;/dev/null
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Save and exit your crontab file.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: You can add an output log file by using the &lt;code&gt;--log-file&lt;/code&gt; parameter found in step 5. Additionally, you can also choose between the &lt;code&gt;sync&lt;/code&gt; and &lt;code&gt;copy&lt;/code&gt; rclone modes.&lt;/p&gt;
+&lt;h3 id=&#34;step-7---restoring-your-files-&#34;&gt;Step 7 - Restoring Your Files&lt;/h3&gt;
+&lt;p&gt;To obtain you files from Backblaze, you will need to configure rclone on a new machine or you will need to move to a different location of your uploading computer. It can be helpful to backup you configuration files to make it easier to restore. Once your configuration is correct, run the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;rclone sync secret: /path/to/folder
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;thats-it-&#34;&gt;That&amp;rsquo;s it!&lt;/h3&gt;
+&lt;p&gt;Your files are now being securely backed up to the cloud!&lt;/p&gt;
+&lt;p&gt;Big shoutout to &lt;a href=&#34;https://gist.github.com/defectivebit&#34;&gt;defectivebit&lt;/a&gt; on GitHub who wrote &lt;a href=&#34;https://gist.github.com/defectivebit/95b159ed5ba7e1d5d85d74c6e4b04dea&#34;&gt;this&lt;/a&gt; awesome Gist that helped guide me on getting my backup setup.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
