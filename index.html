@@ -6,52 +6,43 @@
     <title>hunterparks.com</title>
     <link rel="shortcut icon" href="/favicon.png">
     <style>
-        body, html {
-            font-family: sans-serif;
-            font-size: 1.1rem;
-            height: 100%;
-            color: #2c2c2c;
-            background-color: #eaeaea;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
             align-items: center;
+            background-color: hsl(0, 0%, 92%);
+            color: hsl(0, 0%, 17%);
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 75vh;
+            justify-content: center;
+            margin: 2.5rem;
         }
-        *, :after, :before {
-            box-sizing: inherit;
+        .container h1 {
+            margin-bottom: 1.5rem;
         }
-        a, a:visited {
-            color: #000;
+        .container p {
+            max-width: 50ch;
         }
-        section {
-            max-width: 640px;
-            height: 50vh;
+        .container p:not(:last-of-type) {
+            margin-bottom: 1rem;
         }
         @media (prefers-color-scheme: dark) {
-            body, html {
-                color: #eaeaea;
-                background-color: #2c2c2c;
+            body {
+                background-color: hsl(0, 0%, 8%);
+                color: hsl(0, 0%, 80%);
             }
         }
     </style>
-    <script>
-    </script>
 </head>
 <body>
-    <div id="container">
-        <header id="header"></header>
-        <main role="main">
-            <section>
-                <div>
-                    <h1>hunter parks</h1>
-                    <p>Hello, there! 👋</p>
-                    <p>
-                        This website is still under construction 🚧.
-                    </p>
-                </div>
-            </section>
-        </main>
-        <footer id="footer"></footer>
+    <div class="container">
+        <h1>hunter parks</h1>
+        <p>Hello, there! <span>👋</span></p>
+        <p>This website is still under construction 🚧.</p>
     </div>
 </body>
 </html>
