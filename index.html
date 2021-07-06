@@ -10,6 +10,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-size: 1.05em;
+        }
+        a, a:visited {
+            color: inherit;
         }
         body {
             align-items: center;
@@ -20,6 +24,12 @@
             min-height: 75vh;
             justify-content: center;
             margin: 2.5rem;
+        }
+        body::after {
+            content: '☀️';
+            position: absolute;
+            bottom: 0.5em;
+            right: 0.5em;
         }
         .container h1 {
             margin-bottom: 1.5rem;
@@ -35,14 +45,28 @@
                 background-color: hsl(0, 0%, 8%);
                 color: hsl(0, 0%, 80%);
             }
+            body::after {
+                content: '🌙';
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>hunter parks</h1>
-        <p>Hello, there! <span>👋</span></p>
-        <p>This website is still under construction 🚧.</p>
+        <p>
+            Hello, there! <span>👋</span> I am a software engineer living in
+            the Milwaukee, WI area. I love creating software that positivity
+            impacts every user. Many of my personal projects can be found on
+            <a href="https://github.com/hunterparks?tab=repositories">Github</a>.
+        </p>
+        <p>
+            Please feel free to connect with me on
+            <a href="https://www.linkedin.com/in/hunterparks/">LinkedIn</a>,
+            <a href="https://twitter.com/SharkTernUp/">Twitter</a>,
+            or by
+            <a href="mailto:huntermparks@gmail.com">email</a>.
+        </p>
     </div>
 </body>
 </html>
