@@ -14,6 +14,7 @@
         li { list-style-type: '🧀'; }
         li:not(:last-child) { margin-bottom: 0.75rem; }
         p { max-width: 30rem; }
+        section > details, section > details > p { margin-left: 1rem; }
     </style>
   </head>
   <body>
@@ -56,8 +57,28 @@
             </ul>
         </p>
     </section>
+    <section>
+        <h3>Months of New</h3>
+        <p>
+            A goal of mine for 2023 is to read one new book and play
+            one new game each month. Track my choices below!
+        </p>
+        <details open>
+            <summary>January</summary>
+            <p>Game 🎮
+                <a href="https://toukana.com/dorfromantik/">
+                    Dorfromantik
+                </a>
+            </p>
+            <p>Book 📕
+                <a href="https://www.goodreads.com/book/show/20633015-star-trek">
+                    Star Trek: The Next Generation: Technical Manual
+                </a>
+            </p>
+        </details>
+    </section>
     <footer>
-        &copy; 2022 &bull; Made with <span style="color:red">❤</span> in Wisconsin
+        &copy; 2023 &bull; Made with <span style="color:red">❤</span> in Wisconsin
     </footer>
   </body>
 </html>
