@@ -11,10 +11,6 @@
             * {
                 font-family: sans-serif;
             }
-            a {
-                color: inherit;
-                margin-left: 0.25rem;
-            }
             body > *:not(:first-child) {
                 margin-top: 2rem;
             }
@@ -22,14 +18,33 @@
                 list-style-type: '🧀';
             }
             li:not(:last-child) {
-                margin-bottom: 0.75rem;
+                margin-bottom: 0.5rem;
             }
+            table {
+                border-collapse: collapse;
+                border-radius: 0.5rem;
+                overflow: hidden;
+            }
+            table tr:nth-child(2n) {
+                background-color: hsl(249, 11%, 22%);
+            }
+
+            thead {
+                background-color: hsl(48, 100%, 50%);
+                color: hsl(0, 0%, 0%);
+            }
+            @media (prefers-color-scheme: light) {
+                table tr:nth-child(2n) {
+                    background-color: hsl(0, 0%, 90%);
+                }
+            }
+            th,
+            td {
+                padding: 0.25rem 0.5rem;
+            }
+
             p {
-                max-width: 30rem;
-            }
-            section > details,
-            section > details > p {
-                margin-left: 1rem;
+                max-width: 60ch;
             }
         </style>
     </head>
@@ -72,143 +87,142 @@
                 A goal of mine for 2023 is to read one new book and play one new
                 game each month. Track my choices below!
             </p>
-            <details>
-                <summary>January</summary>
-                <p>
-                    Game 🎮
-                    <a href="https://toukana.com/dorfromantik/">
-                        Dorfromantik
-                    </a>
-                </p>
-                <p>
-                    Book 📕
-                    <a
-                        href="https://www.goodreads.com/book/show/20633015-star-trek"
-                    >
-                        Star Trek: The Next Generation: Technical Manual
-                    </a>
-                </p>
-            </details>
-            <details>
-                <summary>February</summary>
-                <p>
-                    Game 🎮
-                    <a href="https://humanity.game/"> Humanity </a>
-                </p>
-                <p>
-                    Book 📕
-                    <a
-                        href="https://www.goodreads.com/book/show/61365248-the-orville"
-                    >
-                        The Orville: Sympathy for the Devil
-                    </a>
-                </p>
-            </details>
-            <details>
-                <summary>March</summary>
-                <p>
-                    Game 🎮
-                    <a href="https://loisteinteractive.com/en/infra.html">
-                        INFRA
-                    </a>
-                </p>
-                <p>
-                    Book 📕
-                    <a
-                        href="https://www.goodreads.com/book/show/35496817-atomic-design"
-                    >
-                        Atomic Design
-                    </a>
-                </p>
-            </details>
-            <details>
-                <summary>April</summary>
-                <p>
-                    Game 🎮
-                    <a href="https://teamwoodgames.com"> Super Auto Pets </a>
-                </p>
-                <p>
-                    Book 📕
-                    <a href="#"> Coming Soon... </a>
-                </p>
-            </details>
-            <details>
-                <summary>May</summary>
-                <p>
-                    Game 🎮
-                    <a
-                        href="https://www.ubisoft.com/en-us/game/trackmania/trackmania"
-                    >
-                        Trackmania
-                    </a>
-                </p>
-                <p>
-                    Book 📕
-                    <a href="#"> Coming Soon... </a>
-                </p>
-            </details>
-            <details>
-                <summary>June</summary>
-                <p>
-                    Game 🎮
-                    <a href="https://www.fireproofgames.com/games/the-room">
-                        The Room
-                    </a>
-                </p>
-                <p>
-                    Book 📕
-                    <a href="#"> Coming Soon... </a>
-                </p>
-            </details>
-            <details>
-                <summary>July</summary>
-                <p>
-                    Game 🎮
-                    <a
-                        href="#\https://www.fireproofgames.com/games/the-room-two"
-                    >
-                        The Room Two
-                    </a>
-                </p>
-                <p>
-                    Book 📕
-                    <a href="#"> Coming Soon... </a>
-                </p>
-            </details>
-            <details>
-                <summary>August</summary>
-                <p>
-                    Game 🎮
-                    <a
-                        href="https://www.fireproofgames.com/games/the-room-three-2"
-                    >
-                        The Room Three
-                    </a>
-                </p>
-                <p>
-                    Book 📕
-                    <a href="#"> Coming Soon... </a>
-                </p>
-            </details>
-            <details open>
-                <summary>September</summary>
-                <p>
-                    Game 🎮
-                    <a
-                        href="https://www.fireproofgames.com/games/theroomoldsins"
-                    >
-                        The Room 4: Old Sins
-                    </a>
-                </p>
-                <p>
-                    Book 📕
-                    <a href="#"> Coming Soon... </a>
-                </p>
-            </details>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Game 🎮</th>
+                        <th>Book 📕</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>January</td>
+                        <td>
+                            <a href="https://toukana.com/dorfromantik/">
+                                Dorfromantik
+                            </a>
+                        </td>
+                        <td>
+                            <a
+                                href="https://www.goodreads.com/book/show/20633015-star-trek"
+                            >
+                                Star Trek: The Next Generation: Technical Manual
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>
+                            <a href="https://humanity.game/"> Humanity </a>
+                        </td>
+                        <td>
+                            <a
+                                href="https://www.goodreads.com/book/show/61365248-the-orville"
+                            >
+                                The Orville: Sympathy for the Devil
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>March</td>
+                        <td>
+                            <a
+                                href="https://loisteinteractive.com/en/infra.html"
+                            >
+                                INFRA
+                            </a>
+                        </td>
+                        <td>
+                            <a
+                                href="https://www.goodreads.com/book/show/35496817-atomic-design"
+                            >
+                                Atomic Design
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>April</td>
+                        <td>
+                            <a href="https://teamwoodgames.com">
+                                Super Auto Pets
+                            </a>
+                        </td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>May</td>
+                        <td>
+                            <a
+                                href="https://www.ubisoft.com/en-us/game/trackmania/trackmania"
+                            >
+                                Trackmania
+                            </a>
+                        </td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>June</td>
+                        <td>
+                            <a
+                                href="https://www.fireproofgames.com/games/the-room"
+                            >
+                                The Room
+                            </a>
+                        </td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>July</td>
+                        <td>
+                            <a
+                                href="#\https://www.fireproofgames.com/games/the-room-two"
+                            >
+                                The Room Two
+                            </a>
+                        </td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>August</td>
+                        <td>
+                            <a
+                                href="https://www.fireproofgames.com/games/the-room-three-2"
+                            >
+                                The Room Three
+                            </a>
+                        </td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>September</td>
+                        <td>
+                            <a
+                                href="https://www.fireproofgames.com/games/theroomoldsins"
+                            >
+                                The Room 4: Old Sins
+                            </a>
+                        </td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>October</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>November</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>December</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
-        <footer>
-            &copy; 2023 &bull; Made with <span style="color: red">❤</span> in
-            Wisconsin
-        </footer>
+        <footer>&copy; 2023 &bull; Made with 💛 in Wisconsin</footer>
     </body>
 </html>
