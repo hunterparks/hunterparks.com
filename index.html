@@ -7,49 +7,13 @@
     <meta name="description" content="Powered by 🥔" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="/favicon.png" />
-    <title>Hunter Parks</title>
     <style>
-        * {
-            font-family: sans-serif;
-        }
-
-        body>*:not(:first-child) {
-            margin-top: 2rem;
-        }
-
-        p {
-            max-width: 60ch;
-        }
-
-        table {
-            border-collapse: collapse;
-            border-radius: 0.5rem;
-            overflow: hidden;
-        }
-
-        table tr:nth-child(2n + 1),
-        table tr:nth-child(4n) td:nth-child(1) {
-            background-color: hsl(249, 11%, 22%);
-        }
-
-        @media (prefers-color-scheme: light) {
-
-            table tr:nth-child(2n + 1),
-            table tr:nth-child(4n) td:nth-child(1) {
-                background-color: hsl(0, 0%, 90%);
-            }
-        }
-
-        table tr:first-child {
-            background-color: hsl(48, 100%, 50%);
-            color: hsl(0, 0%, 0%);
-        }
-
-        th,
-        td {
-            padding: 0.25rem 0.5rem;
+        details>details,
+        details>details>*:not(summary) {
+            padding-inline-start: 1rem;
         }
     </style>
+    <title>Hunter Parks</title>
 </head>
 
 <body>
@@ -57,15 +21,6 @@
         <h2>Hello! 👋</h2>
         <p>My name is Hunter Parks.</p>
     </header>
-    <section>
-        <h3>About me</h3>
-        <p>
-            I am a software engineer by day, and a software engineer by
-            night. I love creating projects that solve every sort of problem
-            in everyday life. Check out my personal projects on Github, link
-            below!
-        </p>
-    </section>
     <section>
         <h3>Connect with me</h3>
         <ul>
@@ -86,231 +41,227 @@
         </ul>
     </section>
     <section>
-        <h3>Months of New</h3>
+        <h3>Goal</h3>
         <p>
-            A goal I started in 2023 was to play one new game and read on new book each month. It
-            did not go as expected, but I hope to get better with each year!
+            I aim to play one new game and read on new book each month!
         </p>
-        <table>
-            <tr>
-                <th colspan="2">Month</th>
-                <th>2024</th>
-                <th>2023</th>
-            </tr>
-            <tr>
-                <td rowspan="2">January</td>
-                <td>🎮</td>
-                <td>
-                    <a href="https://store.steampowered.com/app/1966720/Lethal_Company">
-                        Lethal Company
-                    </a>
-                </td>
-                <td>
-                    <a href="https://toukana.com/dorfromantik">
-                        Dorfromantik
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>📕</td>
-                <td>
-                    <a href="https://www.goodreads.com/book/show/29083.Snow">
-                        Snow
-                    </a>
-                </td>
-                <td>
-                    <a href="https://www.goodreads.com/book/show/61365248-the-orville">
-                        The Orville: Sympathy for the Devil
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="2">February</td>
-                <td>🎮</td>
-                <td>
-                    <a href="https://www.iambreadgame.com">I Am Bread</a>
-                </td>
-                <td>
-                    <a href="https://humanity.game"> Humanity </a>
-                </td>
-            </tr>
-            <tr>
-                <td>📕</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td rowspan="2">March</td>
-                <td>🎮</td>
-                <td>-</td>
-                <td>
-                    <a href="https://loisteinteractive.com/en/infra.html">
-                        INFRA
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>📕</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td rowspan="2">April</td>
-                <td>🎮</td>
-                <td>
-                    <a href="https://www.maxinferno.com">
-                        A Little to the Left
-                    </a>
-                </td>
-                <td>
-                    <a href="https://teamwoodgames.com">
-                        Super Auto Pets
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>📕</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td rowspan="2">May</td>
-                <td>🎮</td>
-                <td>
-                    <a href="https://www.kasedogames.com/projecthighrise">
-                        Project Highrise
-                    </a>
-                </td>
-                <td>
-                    <a href="https://www.ubisoft.com/en-us/game/trackmania/trackmania">
-                        Trackmania
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>📕</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td rowspan="2">June</td>
-                <td>🎮</td>
-                <td>-</td>
-                <td>
-                    <a href="https://www.fireproofgames.com/games/the-room">
-                        The Room
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>📕</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td rowspan="2">July</td>
-                <td>🎮</td>
-                <td>
-                    <a style="display: block" href="https://store.steampowered.com/app/2381620/Steam_Engine_Simulator">
-                        Steam Engine Simulator
-                    </a>
-                    <a style="display: block" href="http://fishingplanet.com">
-                        Fishing Planet
-                    </a>
-                </td>
-                <td>
-                    <a href="https://www.fireproofgames.com/games/the-room-two">
-                        The Room Two
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>📕</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td rowspan="2">August</td>
-                <td>🎮</td>
-                <td>
-                    <a href="https://playism.com/en/game/refindself">
-                        Refind Self
-                    </a>
-                </td>
-                <td>
-                    <a href="https://www.fireproofgames.com/games/the-room-three-2">
-                        The Room Three
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>📕</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td rowspan="2">September</td>
-                <td>🎮</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>📕</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td rowspan="2">October</td>
-                <td>🎮</td>
-                <td>
-                    <a href="https://horribleguild.com/product-tag/railroad-ink">
-                        Railraod Ink Challenge
-                    </a>
-                </td>
-                <td>
-                    <a href="https://www.counter-strike.net/cs2">
-                        Counter-Strike 2
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>📕</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td rowspan="2">November</td>
-                <td>🎮</td>
-                <td>-</td>
-                <td>
-                    <a href="https://store.steampowered.com/app/915310/SNKRX">
-                        SNKRX
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>📕</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td rowspan="2">December</td>
-                <td>🎮</td>
-                <td>
+        <details open>
+            <summary>2024</summary>
+            <details open>
+                <summary>December</summary>
+                <p>
+                    🎮
                     <a href="https://motorsportgames.com/nascar-heat-2022/index.html">
                         NASCAR Heat 5
                     </a>
-                </td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>📕</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-        </table>
+                </p>
+            </details>
+            <details>
+                <summary>October</summary>
+                <p>
+                    🎮
+                    <a href="https://horribleguild.com/product-tag/railroad-ink">
+                        Railroad Ink Challenge
+                    </a>
+                </p>
+            </details>
+            <details>
+                <summary>August</summary>
+                <p>
+                    🎮
+                    <a href="https://playism.com/en/game/refindself">
+                        Refind Self
+                    </a>
+                </p>
+            </details>
+            <details>
+                <summary>July</summary>
+                <p>
+                    🎮
+                    <a href="https://store.steampowered.com/app/2381620/Steam_Engine_Simulator">
+                        Steam Engine Simulator
+                    </a>
+                    <<<<<<< HEAD </td>
+                        </tr>
+                        <tr>
+                            <td>📕</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">September</td>
+                            <td>🎮</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>📕</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">October</td>
+                            <td>🎮</td>
+                            <td>
+                                <a href="https://horribleguild.com/product-tag/railroad-ink">
+                                    Railraod Ink Challenge
+                                </a>
+                            </td>
+                            <td>
+                                <a href="https://www.counter-strike.net/cs2">
+                                    Counter-Strike 2
+                                    =======
+                                    &nbsp;&amp;
+                                    <a href="http://fishingplanet.com">
+                                        Fishing Planet
+                                        >>>>>>> 5e8cc45 (:memo: Simplify layout)
+                                    </a>
+                </p>
+            </details>
+            <details>
+                <summary>May</summary>
+                <p>
+                    🎮
+                    <a href="https://www.kasedogames.com/projecthighrise">
+                        Project Highrise
+                    </a>
+                </p>
+            </details>
+            <details>
+                <summary>April</summary>
+                <p>
+                    🎮
+                    <a href="https://www.maxinferno.com">
+                        A Little to the Left
+                    </a>
+                </p>
+            </details>
+            <details>
+                <summary>February</summary>
+                <p>
+                    🎮
+                    <a href="https://www.iambreadgame.com">I Am Bread</a>
+                </p>
+            </details>
+            <details>
+                <summary>January</summary>
+                <p>
+                    📕
+                    <a href="https://www.goodreads.com/book/show/29083.Snow">
+                        Snow
+                    </a>
+                </p>
+                <p>
+                    🎮
+                    <a href="https://store.steampowered.com/app/1966720/Lethal_Company">
+                        Lethal Company
+                    </a>
+                </p>
+            </details>
+        </details>
+        <details>
+            <summary>2023</summary>
+            <details>
+                <summary>November</summary>
+                <p>
+                    🎮
+                    <a href="https://store.steampowered.com/app/915310/SNKRX">
+                        SNKRX
+                    </a>
+                </p>
+            </details>
+            <details>
+                <summary>October</summary>
+                <p>
+                    🎮
+                    <a href="https://www.counter-strike.net/cs2">
+                        Counter-Strike 2
+                    </a>
+                </p>
+            </details>
+            <details>
+                <summary>August</summary>
+                <p>
+                    🎮
+                    <a href="https://www.fireproofgames.com/games/the-room-three-2">
+                        The Room Three
+                    </a>
+                </p>
+            </details>
+            <details>
+                <summary>July</summary>
+                <p>
+                    🎮
+                    <a href="https://www.fireproofgames.com/games/the-room-two">
+                        The Room Two
+                    </a>
+                </p>
+            </details>
+            <details>
+                <summary>June</summary>
+                <p>
+                    🎮
+                    <a href="https://www.fireproofgames.com/games/the-room">
+                        The Room
+                    </a>
+                </p>
+            </details>
+            <details>
+                <summary>May</summary>
+                <p>
+                    🎮
+                    <a href="https://www.ubisoft.com/en-us/game/trackmania/trackmania">
+                        Trackmania
+                    </a>
+                </p>
+            </details>
+            <details>
+                <summary>April</summary>
+                <p>
+                    🎮
+                    <a href="https://teamwoodgames.com">
+                        Super Auto Pets
+                    </a>
+                </p>
+            </details>
+            <details>
+                <summary>March</summary>
+                <p>
+                    🎮
+                    <a href="https://loisteinteractive.com/en/infra.html">
+                        INFRA
+                    </a>
+                </p>
+            </details>
+            <details>
+                <summary>February</summary>
+                <p>
+                    🎮
+                    <a href="https://humanity.game"> Humanity </a>
+                </p>
+            </details>
+            <details>
+                <summary>January</summary>
+                <p>
+                    📕
+                    <a href="https://www.goodreads.com/book/show/61365248-the-orville">
+                        The Orville: Sympathy for the Devil
+                    </a>
+                </p>
+                <p>
+                    🎮
+                    <a href="https://toukana.com/dorfromantik">
+                        Dorfromantik
+                    </a>
+                </p>
+            </details>
+        </details>
     </section>
-    <footer>&copy;2024 &bull; Made with 💛 in Wisconsin</footer>
+    <footer>
+        <p>
+            &copy;2024 &bull; Made with 💛 in Wisconsin
+        </p>
+    </footer>
 </body>
 
 </html>
