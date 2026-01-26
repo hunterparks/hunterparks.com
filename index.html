@@ -4,501 +4,320 @@
 <head>
     <meta charset="utf-8" />
     <meta name="color-scheme" content="dark light" />
-    <meta name="description" content="Powered by 🥔" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="/favicon.png" />
+    <title>Hunter Parks</title>
     <style>
+        body {
+            max-width: 70ch;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            line-height: 1.5;
+            font-family: system-ui, sans-serif;
+        }
+
+        header {
+            margin-bottom: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: .5rem 0 0;
+            display: flex;
+            gap: .75rem;
+            flex-wrap: wrap;
+        }
+
+        a {
+            text-underline-offset: .15em;
+        }
+
+        main {
+            margin-top: 1.5rem;
+        }
+
+        details {
+            margin: .75rem 0;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+        }
+
         details>*:not(summary) {
             padding-inline-start: 1rem;
         }
+
+        footer {
+            margin-top: 2rem;
+            font-size: .9em;
+            opacity: .8;
+        }
+
+        :focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 2px;
+        }
+
+        ul li ul {
+            list-style: none;
+        }
     </style>
-    <title>Hunter Parks</title>
 </head>
 
 <body>
     <header>
-        <h2>Hello! 👋</h2>
+        <h1>Hello! 👋</h1>
+        <nav aria-label="Connect with me">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/hunterparks">LinkedIn</a></li>
+                <li><a href="https://github.com/hunterparks">GitHub</a></li>
+                <li><a href="https://twitter.com/SharkTernUp">Twitter</a></li>
+                <li><a href="mailto:huntermparks@gmail.com">Email</a></li>
+            </ul>
+        </nav>
     </header>
-    <section>
-        <h3>Connect with me</h3>
-        <ul>
-            <li>
-                <a href="https://www.linkedin.com/in/hunterparks">
-                    LinkedIn
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/hunterparks"> GitHub </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/SharkTernUp"> Twitter </a>
-            </li>
-            <li>
-                <a href="mailto:huntermparks@gmail.com"> Email </a>
-            </li>
-        </ul>
-    </section>
-    <section>
-        <h3>Goal</h3>
-        <p>
-            I aim to play one new game and read one new book each month!
-        </p>
-        <details open>
-            <summary>2026</summary>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>January</td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="#">
-                                    Coming soon...
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </details>
-        <details>
-            <summary>2025</summary>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>December</td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://store.steampowered.com/app/3115220/Town_to_City">
-                                    Town to City (Demo)
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>November</td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://sokpop.itch.io/stacklands">
-                                    Stacklands
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>October</td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://www.modulusgame.com">
-                                    Modulus (Demo)
-                                </a>
-                                &nbsp;&amp;
-                                <a href="https://momentum-mod.org">
-                                    Momentum Mod (Playtest)
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>September</td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://peakpeakpeak.com">
-                                    Peak
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>August</td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://signalstate.io">
-                                    The Signal State
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>July</td>
-                        <td>
-                            <p>
-                                📕
-                                <a href="https://www.goodreads.com/book/show/218372431-the-1-dad-book">
-                                    The #1 Dad Book
-                                </a>
-                            </p>
-                            <p>
-                                🎮
-                                <a href="http://www.professional-farmer.com">
-                                    Professional Farmer 2014
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>June</td>
-                        <td>
-                            <p>
-                                📕
-                                <a href="https://www.youtube.com/watch?v=zodVXZYWnao">
-                                    Star Trek: Endurance - Issue 3
-                                </a>
-                            </p>
-                            <p>
-                                🎮
-                                <a href="https://skyhookgames.com/lawn-mowing-simulator">
-                                    Lawn Mowing Simulator
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>May</td>
-                        <td>
-                            <p>
-                                📕
-                                <a href="https://www.youtube.com/watch?v=720u2Zi_jJM">
-                                    Star Trek: Endurance - Issue 2
-                                </a>
-                            </p>
-                            <p>
-                                🎮
-                                <a href="https://www.simutrans.com/en">
-                                    Simutrans
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>April</td>
-                        <td>
-                            <p>
-                                📕
-                                <a href="https://www.youtube.com/watch?v=I9m_m23jAiw">
-                                    Star Trek: Endurance - Issue 1
-                                </a>
-                            </p>
-                            <p>
-                                🎮
-                                <a href="https://flippfly.com/racethesun">
-                                    Race The Sun
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>March</td>
-                        <td>
-                            <p>
-                                📕
-                                <a href="https://www.goodreads.com/book/show/35496817-atomic-design">
-                                    Atomic Design
-                                </a>
-                            </p>
-                            <p>
-                                🎮
-                                <a href="http://www.griptopgames.com">
-                                    Tametsi
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>February</td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://whitethorngames.com/evans-remains">
-                                    Evan's Remains
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>January</td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://curvegames.com/our-games/hue">
-                                    Hue
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </details>
-        <details>
-            <summary>2024</summary>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            December
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://motorsportgames.com/nascar-heat-2022/index.html">
-                                    NASCAR Heat 5
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            October
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://horribleguild.com/product-tag/railroad-ink">
-                                    Railraod Ink Challenge
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            August
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://playism.com/en/game/refindself">
-                                    Refind Self
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            July
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="http://fishingplanet.com">
-                                    Fishing Planet
-                                </a>
-                                &nbsp;&amp;
-                                <a href="https://store.steampowered.com/app/2381620/Steam_Engine_Simulator">
-                                    Steam Engine Simulator
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            May
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://www.kasedogames.com/projecthighrise">
-                                    Project Highrise
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            April
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://www.maxinferno.com">
-                                    A Little to the Left
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            February
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://www.iambreadgame.com">I Am Bread</a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            January
-                        </td>
-                        <td>
-                            <p>
-                                📕
-                                <a href="https://www.goodreads.com/book/show/29083.Snow">
-                                    Snow
-                                </a>
-                            </p>
-                            <p>
-                                🎮
-                                <a href="https://store.steampowered.com/app/1966720/Lethal_Company">
-                                    Lethal Company
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </details>
-        <details>
-            <summary>2023</summary>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            November
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://store.steampowered.com/app/915310/SNKRX">
-                                    SNKRX
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            October
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://www.counter-strike.net/cs2">
-                                    Counter-Strike 2
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            August
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://www.fireproofgames.com/games/the-room-three-2">
-                                    The Room Three
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            July
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://www.fireproofgames.com/games/the-room-two">
-                                    The Room Two
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            June
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://www.fireproofgames.com/games/the-room">
-                                    The Room
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            May
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://www.ubisoft.com/en-us/game/trackmania/trackmania">
-                                    Trackmania
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            April
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://teamwoodgames.com">
-                                    Super Auto Pets
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            March
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://loisteinteractive.com/en/infra.html">
-                                    INFRA
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            February
-                        </td>
-                        <td>
-                            <p>
-                                🎮
-                                <a href="https://humanity.game"> Humanity </a>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            January
-                        </td>
-                        <td>
-                            <p>
-                                📕
-                                <a href="https://www.goodreads.com/book/show/61365248-the-orville">
-                                    The Orville: Sympathy for the Devil
-                                </a>
-                            </p>
-                            <p>
-                                🎮
-                                <a href="https://toukana.com/dorfromantik">
-                                    Dorfromantik
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </details>
-    </section>
+
+    <main>
+        <section aria-labelledby="goal">
+            <h2 id="goal">Goal</h2>
+            <p>I aim to play one new game and read one new book each month!</p>
+
+            <details open>
+                <summary>2026</summary>
+                <ul>
+                    <li><strong>January</strong>
+                        <ul>
+                            <li>🎮 <a href="#">Coming soon...</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>2025</summary>
+                <ul>
+                    <li><strong>December</strong>
+                        <ul>
+                            <li>🎮 <a href="https://store.steampowered.com/app/3115220/Town_to_City">Town to City
+                                    (Demo)</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>November</strong>
+                        <ul>
+                            <li>🎮 <a href="https://sokpop.itch.io/stacklands">Stacklands</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>October</strong>
+                        <ul>
+                            <li>🎮 <a href="https://www.modulusgame.com">Modulus (Demo)</a></li>
+                            <li>🎮 <a href="https://momentum-mod.org">Momentum Mod (Playtest)</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>September</strong>
+                        <ul>
+                            <li>🎮 <a href="https://peakpeakpeak.com">Peak</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>August</strong>
+                        <ul>
+                            <li>🎮 <a href="https://signalstate.io">The Signal State</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>July</strong>
+                        <ul>
+                            <li>📕 <a href="https://www.goodreads.com/book/show/218372431-the-1-dad-book">The #1 Dad
+                                    Book</a></li>
+                            <li>🎮 <a href="http://www.professional-farmer.com">Professional Farmer 2014</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>June</strong>
+                        <ul>
+                            <li>📕 <a href="https://www.youtube.com/watch?v=zodVXZYWnao">Star Trek: Endurance - Issue
+                                    3</a></li>
+                            <li>🎮 <a href="https://skyhookgames.com/lawn-mowing-simulator">Lawn Mowing Simulator</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><strong>May</strong>
+                        <ul>
+                            <li>📕 <a href="https://www.youtube.com/watch?v=720u2Zi_jJM">Star Trek: Endurance - Issue
+                                    2</a></li>
+                            <li>🎮 <a href="https://www.simutrans.com/en">Simutrans</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>April</strong>
+                        <ul>
+                            <li>📕 <a href="https://www.youtube.com/watch?v=I9m_m23jAiw">Star Trek: Endurance - Issue
+                                    1</a></li>
+                            <li>🎮 <a href="https://flippfly.com/racethesun">Race The Sun</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>March</strong>
+                        <ul>
+                            <li>📕 <a href="https://www.goodreads.com/book/show/35496817-atomic-design">Atomic
+                                    Design</a></li>
+                            <li>🎮 <a href="http://www.griptopgames.com">Tametsi</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>February</strong>
+                        <ul>
+                            <li>🎮 <a href="https://whitethorngames.com/evans-remains">Evan's Remains</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>January</strong>
+                        <ul>
+                            <li>🎮 <a href="https://curvegames.com/our-games/hue">Hue</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>2024</summary>
+                <ul>
+                    <li><strong>December</strong>
+                        <ul>
+                            <li>🎮 <a href="https://motorsportgames.com/nascar-heat-2022/index.html">NASCAR Heat 5</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><strong>October</strong>
+                        <ul>
+                            <li>🎮 <a href="https://horribleguild.com/product-tag/railroad-ink">Railraod Ink
+                                    Challenge</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>August</strong>
+                        <ul>
+                            <li>🎮 <a href="https://playism.com/en/game/refindself">Refind Self</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>July</strong>
+                        <ul>
+                            <li>🎮 <a href="http://fishingplanet.com">Fishing Planet</a></li>
+                            <li>🎮 <a href="https://store.steampowered.com/app/2381620/Steam_Engine_Simulator">Steam
+                                    Engine Simulator</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>May</strong>
+                        <ul>
+                            <li>🎮 <a href="https://www.kasedogames.com/projecthighrise">Project Highrise</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>April</strong>
+                        <ul>
+                            <li>🎮 <a href="https://www.maxinferno.com">A Little to the Left</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>February</strong>
+                        <ul>
+                            <li>🎮 <a href="https://www.iambreadgame.com">I Am Bread</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>January</strong>
+                        <ul>
+                            <li>📕 <a href="https://www.goodreads.com/book/show/29083.Snow">Snow</a></li>
+                            <li>🎮 <a href="https://store.steampowered.com/app/1966720/Lethal_Company">Lethal
+                                    Company</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>2023</summary>
+                <ul>
+                    <li><strong>November</strong>
+                        <ul>
+                            <li>🎮 <a href="https://store.steampowered.com/app/915310/SNKRX">SNKRX</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>October</strong>
+                        <ul>
+                            <li>🎮 <a href="https://www.counter-strike.net/cs2">Counter-Strike 2</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>August</strong>
+                        <ul>
+                            <li>🎮 <a href="https://www.fireproofgames.com/games/the-room-three-2">The Room Three</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><strong>July</strong>
+                        <ul>
+                            <li>🎮 <a href="https://www.fireproofgames.com/games/the-room-two">The Room Two</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>June</strong>
+                        <ul>
+                            <li>🎮 <a href="https://www.fireproofgames.com/games/the-room">The Room</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>May</strong>
+                        <ul>
+                            <li>🎮 <a href="https://www.ubisoft.com/en-us/game/trackmania/trackmania">Trackmania</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><strong>April</strong>
+                        <ul>
+                            <li>🎮 <a href="https://teamwoodgames.com">Super Auto Pets</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>March</strong>
+                        <ul>
+                            <li>🎮 <a href="https://loisteinteractive.com/en/infra.html">INFRA</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>February</strong>
+                        <ul>
+                            <li>🎮 <a href="https://humanity.game">Humanity</a></li>
+                        </ul>
+                    </li>
+
+                    <li><strong>January</strong>
+                        <ul>
+                            <li>📕 <a href="https://www.goodreads.com/book/show/61365248-the-orville">The Orville:
+                                    Sympathy for the Devil</a></li>
+                            <li>🎮 <a href="https://toukana.com/dorfromantik">Dorfromantik</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </details>
+        </section>
+    </main>
+
     <footer>
-        <p>
-            &copy;2026 &bull; Made with 💛 in Wisconsin
-        </p>
+        <p>&copy;2026 &bull; Made with 💛 in Wisconsin</p>
     </footer>
 </body>
 
